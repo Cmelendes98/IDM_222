@@ -1,0 +1,451 @@
+ @font-face {
+    font-family: 'Top Modern';
+    src: url('TopModern.eot');
+    src: url('TopModern.eot?#iefix') format('embedded-opentype'),
+        url('TopModern.woff') format('woff'),
+        url('TopModern.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+body,html {
+    font-family: 'Century Gothic';
+	margin:0px;
+}  
+
+body *{
+box-sizing: border-box;
+}
+
+h1{
+     font-family: 'Top Modern';
+}
+header,footer,.body_wrap{
+	width:100%;
+	margin:0px auto;
+}
+header{
+    background: url('header.png') no-repeat;
+   	height: 199px;
+
+}
+footer{
+    background: url('footer.png') no-repeat;
+    height: 200px;
+}
+.body_wrap.home_page{
+	background: url('homepage/home-page.png') no-repeat;
+   	min-height: 1230px;
+   	background-size: cover;
+    background-position: center;
+}
+header nav {
+		float: right;
+	    margin: 80px 25px 0px
+}
+header nav div{ 
+	border-left:1px solid purple;
+	color:white;
+    float: left;
+    padding: 10px;
+    margin:10px 0px;
+    display: inline-block; 
+}
+header nav div.noborder{ 
+	border:0px;
+
+	}
+.clearfix {
+    overflow: auto;
+} 
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+header a,header a:link,header a:visited,header a:hover{
+	color:white;
+	text-decoration: none;
+    font-weight: normal;
+}
+a,a:link,a:visited,a:hover{
+    color:black;
+    text-decoration: none;
+    font-weight: bold;
+}
+a:hover,header a:hover{
+	text-decoration: underline;
+}
+header a.current-page{
+	color:#91749e;
+}
+.logo{
+	color:white;
+    font-size: 4.1rem;
+    float: left;
+    margin: 66px 0px 0px 38px;
+    font-family: 'Top Modern';
+    font-weight: normal;
+    font-style: normal;
+
+}
+.logo a:hover{
+	text-decoration: none;
+    color:#91749e;
+}
+footer{
+    box-sizing: border-box;
+    background: url(footer.png) no-repeat;
+    height: 200px;
+    text-align: center;
+    padding: 60px 0px;
+}
+.resume_footer{
+    padding:40px 0px;
+}
+footer img{
+    height:80px;
+
+}
+.home_page .center_block{
+    float:left;
+    margin-top: 404px;
+    width: 363px;
+    text-align:center;
+
+}
+.home_page .center_block.middle{
+
+}
+.home_page .center_block.left{
+    padding:0px 0px 0px 50px;
+    margin-left:33px;
+}
+.home_page .center_block.right{
+    padding: 0px 50px 0px 0px;
+    float:right;
+    margin-right: 71px;
+
+}
+.home_page .center_block_wrapper{
+    width:100%;
+    margin:0px auto;
+    overflow:auto;
+}
+.img_container{
+    width:100%;
+    /* height:350px; */
+    overflow: hidden;
+}
+
+.gradient {
+     background: url(gradient.png) repeat-x;
+     min-height: 200px;
+     padding:20px 0px;
+     overflow:auto;
+}
+.content-wrapper{
+    margin:40px;
+    text-align:center;
+}
+.content-wrapper img{
+        border-radius: 10px;
+        width:300px;
+}
+.all-boxes{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+form {
+    padding: 11px 38px 100px 38px;
+    overflow: auto;
+    max-width: 992px;
+}
+ .float-right{
+    float:right;
+ }
+
+textarea, input {
+    border-radius: 15px;
+    padding: 9px;
+    font-size: 20px;
+
+}
+h2 {
+    margin-bottom: 32px;
+}
+.text-center{
+    text-align: center;
+    padding:150px 0px;
+    min-height: 450px;
+}
+.resume_page img{
+    width:100%;
+}
+.resume_page {
+    height:1000px;
+}
+.resume_page iframe {
+    border: 0px;
+}
+.download_link {
+    border: 1px solid white;
+    padding: 10px;
+    background-color: white;
+    border-radius: 5px;
+    opacity: .75;
+    width: 200px;
+    margin: 0px AUTO;
+    margin-bottom: 6px;
+}
+#slides {
+    position: relative;
+    height: auto;
+    width:100%;
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+    list-style-type: none;
+    min-height: 300px;
+}
+
+.slide {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 1;
+
+    -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    transition: opacity 1s;
+}
+
+.slide img {
+    width:100%;
+}
+
+.showing {
+    opacity: 1;
+    z-index: 2;
+} 
+
+/* BEGIN SIDE NAV FOR MOBILE */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    transition: margin-left .5s;
+}
+
+.openLink {
+    display:none;
+}
+.center_block_wrapper_mobile{
+    display:none;
+        
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+} 
+
+/* END SIDE NAV FOR MOBILE */
+
+/* media query for anything less than desktop  */
+@media screen and (max-width: 1024px) {
+    .body_wrap,header, footer { 
+        width: 100%;
+
+    }
+    .gradient {
+         background: url(gradient.png) no-repeat; 
+         background-size:cover;
+
+    }
+    .body_wrap.home_page {
+         background: url(gradient.png) repeat-x;
+         background-size:cover;
+
+    }
+    .home_page .center_block{
+        float:left;
+        margin-top: 0px;
+        width: 50%;
+        text-align:center;
+
+    }
+    textarea, input {
+        width:100%;
+    }
+    
+    nav {
+            display:none;
+        
+     }
+    .home_page .center_block.middle{
+            display:none;
+
+    }
+    .home_page .center_block.left{
+        padding: 0px 0px 0px 0px;
+        margin-left: 20px;
+        max-width: 370px;
+    }
+    .home_page .center_block.right{
+        padding: 0px 0px 0px 0px;
+        margin-right: 20px;
+        max-width: 370px;
+
+    }
+    .openLink {
+        display:inline-block;
+        float: left;
+        position: absolute;
+    }
+
+    .openLink  img{
+        max-width: 50px;
+    }
+
+    .logo { 
+        padding: 66px 0px 0px 0px;
+        text-align: center;
+        margin:0px;
+        float:none;
+
+    }
+    .center_block_wrapper_mobile{
+        display:block;
+        text-align:center;
+
+    }
+    .center_block_wrapper_mobile img{
+        width: 522px; 
+        margin:100px 0px;
+
+
+    }
+    #slides {
+        min-height: 200px;
+        max-height: 200px;
+    }
+}
+
+/* fix sliders and video for edge case between 1024 and 1170px */
+@media screen and (min-width: 1025px) and (max-width:1190px) {
+    #slides {
+        min-height:200px;
+        max-height: 200px;
+    }
+    .center_block.middle {
+    width: auto;
+    max-width: 300px;
+    }
+}
+
+/* media query for mobile device and vertical tablet */
+@media screen and (min-width: 0px ) and (max-width: 768px) {
+     header a {
+        text-align:center;
+     }
+     .home_page.body_wrap {
+        min-height:unset;
+
+     }
+
+    .logo {
+    text-align: center;
+    padding-top: 50px;
+    float:none;
+    margin: 0px;
+    }
+    
+    #slides {
+        min-height: 100px;
+        max-height: 100px;
+    }
+
+    nav {
+        display:none;
+    }
+    .center_block_wrapper_mobile{
+        display:block;
+
+    }
+    .center_block_wrapper_mobile img{
+        max-width: 100%; 
+        margin-top:15%;
+
+
+    }
+    .home_page .center_block.middle{
+            display:none;
+
+    }
+    .home_page .center_block.left, .home_page .center_block.right{
+        padding: 30px 10px;
+        width: 100%;
+        float:none;
+        max-width:100%;
+        margin:0px;
+
+
+    }
+}
+/* media query for horizontal tablet */
+@media screen and (min-width: 769px ) and (max-width: 1024px) {
+     
+    
+
+}
+/* media query for anything less than tablet  */
+/*@media screen and (min-width: 1025px) and (max-width: 1365px) {
+    .body_wrap.home_page {
+        background: lightgreen;
+    }
+
+} */
+
